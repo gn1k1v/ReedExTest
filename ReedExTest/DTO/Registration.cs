@@ -136,6 +136,11 @@ namespace ReedExTest.DTO
                     hashCode = hashCode * 59 + this.Organisation.GetHashCode();
                 return hashCode;
             }
-        }        
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as Registration);
+        }
     }
 }
